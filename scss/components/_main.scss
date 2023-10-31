@@ -1,0 +1,49 @@
+@use "../abstracts/mixins" as *;
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ .uppercase {
+   text-transform: uppercase;
+ }
+
+ .text-white {
+   color: hsl(var(--clr-neutral-2));
+ }
+
+ .text-accent {
+   color: hsl(var(--clr-neutral-1));
+ }
+
+ .text-dark {
+   color: hsl(var(--clr-primary-1));
+ }
+
+ .span-opacity {
+   color: hsl(var(--clr-neutral-2), .25);
+ }
+
+ .title-opacity {
+   color: hsl(var(--clr-neutral-2), .5042);
+ }
+
+ .bold {
+   font-weight: 700;
+ }
+
+ body {
+   background-color: hsl(var(--clr-primary-1));
+   min-height: 100vh;
+   background-size: cover;
+ }
+
+
+
+

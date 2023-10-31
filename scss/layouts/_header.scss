@@ -1,0 +1,148 @@
+@use "../abstracts/mixins" as *;
+
+.header {
+   margin-top: 2.5rem;
+   margin-left: 3.44rem;
+   background-color: transparent;
+
+   align-items: center;
+   justify-content: space-between;
+
+   @include mq(medium) {
+      margin-left: 2.44rem;
+      margin-top: 0;
+   }
+
+   @include mq(small) {
+      margin-left: var(--inline-small);
+      margin-top: 1.5rem;
+   }
+
+   &::after {
+      position: relative;
+      display: block;
+      content: '';
+      height: 1px;
+      background: hsl(var(--clr-neutral-2), 0.2515);
+      width: 100%;
+      margin-left: 4rem;
+      margin-right: -1.88rem;
+      order: 1;
+      z-index: 2;
+
+      @include mq(medium) {
+         display: none;
+      }
+   }
+}
+
+.header nav {
+   order:2;
+}
+
+.header-logo {
+   cursor: pointer;
+   width: 3rem;
+   height: 3rem;
+
+   @include mq(medium) {
+      width: 2.5rem;
+      height: 2.5rem;
+   }
+}
+
+.primary-nav {
+   padding-inline: clamp(3rem, 9vw, 7.69rem) clamp(4rem, 13vw, 10.44rem);
+   gap: 3.12rem;
+
+   background: hsl(var(--clr-neutral-2), 0.04);
+   backdrop-filter: blur(40.774227142333984px);
+
+   z-index: 1;
+
+   @include mq(medium) {
+      padding-inline: 3rem;  
+      gap: 2.31rem; 
+   } 
+
+   @include mq(small) {
+      flex-direction: column;
+      gap: 2rem;
+      position: fixed;
+      inset: 0 0 0 32%;
+      padding: min(30vh, 7.38rem) 2rem;
+      transform: translateX(100%);
+      transition: transform 500ms ease-in-out;
+   }
+}
+
+.primary-nav[data-visible="true"] {
+   transform: translateX(0%);
+}
+
+.primary-nav span {
+   margin-right: 0.75rem;
+   display: inline;
+
+   @include mq(medium) {
+      display: none;
+   } 
+
+   @include mq(small) {
+      display: inline;
+      margin-right: 0.69rem;
+   }
+}
+
+.primary-nav li {
+
+   @include mq(small) {
+      display: block;
+   }
+}
+
+.primary-nav a {
+   padding-block: var(--nav-padding);
+
+   @include mq(small) {
+      font-size: 1rem;
+      letter-spacing: 0.16875rem;
+      padding-block: 0;
+      display: block;
+      width: 100%;
+   }   
+}
+
+.second-item {
+   margin-right: 0.13rem;
+}
+
+.header {
+   & .underline > * {
+      padding-block: var(--nav-padding);
+   
+      @include mq(small) {
+         padding-block: 0;
+         border-bottom: none;
+      }
+   }
+}
+
+header {
+   .active {
+      border-bottom: 3px solid hsl(var(--clr-neutral-2));
+   
+      @include mq(small) {
+         border-bottom: none;
+      }
+   }
+}
+
+
+
+
+
+
+   
+
+

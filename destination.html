@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Space tourism website</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body class="destination">
+
+   <header class="header flex-row"> 
+      <img class="header-logo" src="./assets/images/shared/logo.svg" alt="Logo">
+      <button class="mobile-nav-toggle" 
+                aria-controls="primary-navigation" aria-expanded="false">
+      </button>
+      <nav>
+         <ul id="primary-navigation" data-visible="false" class="primary-nav underline flex-row">
+            <li>
+               <a href="index.html" class="subheading-s uppercase text-white"><span aria-hidden="true" class="bold">00</span>Home</a>
+            </li>
+            <li class="second-item active">
+               <a href="destination.html" class="subheading-s uppercase text-white"><span aria-hidden="true" class="bold">01</span>Destination</a>
+            </li>
+            <li>
+               <a href="crew.html" class="subheading-s uppercase text-white"><span aria-hidden="true" class="bold">02</span>Crew</a>
+            </li>
+            <li>
+               <a href="technology.html" class="subheading-s uppercase text-white"><span aria-hidden="true" class="bold">03</span>Technology</a>
+            </li>
+         </ul>
+      </nav>  
+   </header>
+
+   <main class="destination-container">
+
+     
+         <div class="title-section">
+            <h5 class="heading-xs uppercase text-white">
+               <span class="span-opacity bold">01</span> Pick your destination
+            </h5>
+         </div>
+         <div class="dest-pic-section pic-section grid-center">
+            <picture id="moon-image">
+               <img src="./assets/images/destination/image-moon.png" alt="The moon">
+            </picture>
+            <picture hidden id="mars-image">
+               <img src="./assets/images/destination/image-mars.png" alt="The mars">
+            </picture>
+            <picture hidden id="europa-image">
+               <img src="./assets/images/destination/image-europa.png" alt="The Europa">
+            </picture>
+            <picture hidden id="titan-image">
+               <img src="./assets/images/destination/image-titan.png" alt="The titan">
+            </picture>
+         </div>
+
+         <div class="destination-info-wrapper flex-column">
+            <div class="destination-tab underline flex-row" role="tablist" aria-label="destination list">
+               <button aria-selected="true" role="tab" aria-controls="moon-tab" data-image="moon-image" class="subheading-s uppercase text-accent" tabindex="0">Moon</button>
+               <button aria-selected="false" role="tab" aria-controls="mars-tab" data-image="mars-image" class="subheading-s uppercase text-accent" tabindex="-1">Mars</button>
+               <button aria-selected="false" role="tab" aria-controls="europa-tab" data-image="europa-image" class="subheading-s uppercase text-accent" tabindex="-1">Europa</button>
+               <button aria-selected="false" role="tab" aria-controls="titan-tab" data-image="titan-image" class="subheading-s uppercase text-accent" tabindex="-1">Titan</button>
+            </div> 
+            
+            <!-- Moon -->
+
+            <article class="destination-content flex-column" id="moon-tab" tabindex="0" role="tabpanel">
+               <div class="destination-main flex-column">
+                  <h2 class="heading-l text-white uppercase">Moon</h2>
+                  <p class="text-accent">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+                     regain perspective and come back refreshed. While you’re there, take in some history 
+                     by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                  </div>
+   
+               <div class="destination-bottom flex-row">
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Avg. distance
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        384,400 km
+                     </h4>
+                  </div>
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Est. travel time
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        3 days
+                     </h4>
+                  </div>               
+               </div>
+            </article>
+
+            <!-- Mars -->
+
+            <article hidden class="destination-content flex-column" id="mars-tab" tabindex="1" role="tabpanel">
+               <div class="destination-main flex-column">
+                  <h2 class="heading-l text-white uppercase">Mars</h2>
+                  <p class="text-accent">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+                     the tallest planetary mountain in our solar system. It’s two and a half times 
+                     the size of Everest!</p>
+               </div>
+
+               <div class="destination-bottom flex-row">
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Avg. distance
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        225 mil. km
+                     </h4>
+                  </div>
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Est. travel time
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        9 months
+                     </h4>
+                  </div>               
+               </div>
+            </article>
+
+            <!-- Europa -->
+
+            <article hidden class="destination-content flex-column" id="europa-tab" tabindex="2" role="tabpanel">
+               <div class="destination-main flex-column">
+                  <h2 class="heading-l text-white uppercase">Europa</h2>
+                  <p class="text-accent">The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
+                     winter lover’s dream. With an icy surface, it’s perfect for a bit of 
+                     ice skating, curling, hockey, or simple relaxation in your snug 
+                     wintery cabin.</p>
+               </div>
+
+               <div class="destination-bottom flex-row">
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Avg. distance
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        628 mil. km
+                     </h4>
+                  </div>
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Est. travel time
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        3 years
+                     </h4>
+                  </div>               
+               </div>
+            </article>
+
+            <!-- Titan -->
+
+            <article hidden class="destination-content flex-column" id="titan-tab" tabindex="3" role="tabpanel">
+               <div class="destination-main flex-column hidden">
+                  <h2 class="heading-l text-white uppercase">Titan</h2>
+                  <p class="text-accent">The only moon known to have a dense atmosphere other than Earth, Titan 
+                     is a home away from home (just a few hundred degrees colder!). As a 
+                     bonus, you get striking views of the Rings of Saturn.</p>
+               </div>
+
+               <div class="destination-bottom flex-row">
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Avg. distance
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        1.6 bil. km
+                     </h4>
+                  </div>
+                  <div class="distance-section flex-column">
+                     <h5 class="subheading-m uppercase text-accent">
+                        Est. travel time
+                     </h5>
+                     <h4 class="subheading-l uppercase text-white">
+                        7 years
+                     </h4>
+                  </div>               
+               </div>
+            </article>
+
+         </div>
+   
+   </main>
+</body>
+</html>

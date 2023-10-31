@@ -1,0 +1,55 @@
+@use "../abstracts/mixins" as *;
+
+// body {
+//    background-size: cover;
+
+//    @include mq(small) {
+//       padding-inline: 1.5rem;   
+//    }
+// }
+
+.home {
+   background-image: url(../assets/images/home/background-home-desktop.jpg);
+   background-position: center center;
+   justify-content: space-between;
+
+   @include mq(medium) {
+      background-image: url(../assets/images/home/background-home-tablet.jpg);
+      display: grid;
+      grid-template-rows: min-content 1fr;
+      justify-content: stretch;
+      overflow-x: hidden;
+   } 
+
+   @include mq(small) {
+      background-image: url(../assets/images/home/background-home-mobile.jpg);
+   } 
+}
+
+.main-home-container {
+   margin-bottom: 8rem;
+   justify-content: space-around;
+   align-items: flex-end;
+
+   @include mq(medium) {
+      text-align: center;
+      display: grid;
+      place-items: center;
+      padding-inline: 1rem;
+      margin-bottom: 0;
+   } 
+
+   @include mq(small) {
+      padding-inline: var(--inline-small); 
+   } 
+}
+
+.content-wrapper {
+   width: min-content;
+   gap: 1.5rem;
+
+   @include mq(small) {
+      width: 100%;
+      gap: 1rem;
+   } 
+}

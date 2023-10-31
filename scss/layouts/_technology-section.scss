@@ -1,0 +1,120 @@
+@use "../abstracts/mixins" as *;
+
+.technology {
+   background-image: url(../assets/images/technology/background-technology-desktop.jpg);
+   background-position: center center;
+   display: grid;
+   grid-template-rows: min-content 1fr;
+   justify-content: stretch;
+   overflow-x: hidden;
+
+   @include mq(medium) {
+      background-image: url(../assets/images/technology/background-technology-tablet.jpg);
+   } 
+
+   @include mq(small) {
+      background-image: url(../assets/images/technology/background-technology-mobile.jpg);
+      padding-inline: 0;
+   } 
+}
+
+.technology-container {
+   display: grid;
+   grid-template-columns: minmax(5rem, 1fr) repeat(2, minmax(0, 32.1875rem));
+   grid-template-rows: 2.125rem 1fr;
+   margin-left: clamp(1rem, 11vw, 10.44rem);
+   padding-top: 2.5rem;
+   column-gap: 5rem;
+   align-items: center;
+   grid-template-areas: 
+      "title title title"
+      "number content pic";
+   
+   @include mq(medium) {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content;
+      grid-template-areas: 
+      "title"
+      "pic"
+      "number"
+      "content";
+
+      align-items: center;
+      margin-inline: 0;
+      text-align: center;
+
+      padding-block: 2.5rem;
+      place-content: start;
+
+      @include mq(small) {
+         padding-block: 2rem;
+       }
+   }   
+}
+
+.technology-container > .title-section {
+   @include mq(medium) {
+      margin-inline: var(--inline-medium);
+   } 
+}
+
+.numbers {
+   grid-area: number;
+   gap: 2rem;
+
+   @include mq(medium) {
+     flex-direction: row;
+     justify-content: center;
+     gap: 1rem;
+     margin-bottom: 2.81rem;
+   }
+}
+
+.technology-content {
+   grid-area: content;
+   align-items: center;
+   gap: 1rem;
+   align-items: flex-start;
+
+   @include mq(medium) {
+      align-items: center;
+   }
+
+   @include mq(small) {
+      padding-inline: var(--inline-small);
+   }
+}
+
+.technology-content p {
+   max-width: 27.8125rem;
+}
+
+.technology-header {
+   gap: 0.69rem;
+
+   @include mq(medium) {
+      gap: 1rem;
+   }
+
+   @include mq(small) {
+      gap: 0.56rem;
+   }
+}
+
+.technology-pic-section {
+   grid-area: pic;
+
+   @include mq(medium) {
+      margin-block: 3.5rem;
+   }
+
+   @include mq(small) {
+      margin-block: 2rem;
+   }
+}
+
+.technology-pic-section img {
+   @include mq(medium) {
+      min-width: 100%;
+   }
+}

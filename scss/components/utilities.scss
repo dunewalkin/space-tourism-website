@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as *;
+
+.flex-column {
+   display: flex;
+   flex-direction: column;
+}
+
+.flex-row {
+   display: flex;
+   flex-direction: row;
+}
+
+.grid-center {
+   display: grid;
+   place-content: center;
+}
+
+[hidden] { 
+   display: none !important;
+}
+
+

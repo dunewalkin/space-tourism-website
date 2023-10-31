@@ -1,0 +1,144 @@
+@use "../abstracts/mixins" as *;
+
+button {
+   cursor: pointer;
+   border: none;
+}
+
+.btn-wrapper {
+   display: grid;
+   place-content: center;
+}
+
+.main-btn {
+   position: relative;
+   width: 17.125rem;
+   height: 17.125rem;   
+   border-radius: 50%;
+   background-color: hsl(var(--clr-neutral-2));
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+
+   @include mq(medium) {
+      width: 15.125rem;
+      height: 15.125rem;
+   } 
+
+   @include mq(small) {
+      width: 9.375rem;
+      height: 9.375rem;
+   }
+
+   &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: hsl(var(--clr-neutral-2), .1036);
+      opacity: 0;
+      transition: opacity 500ms linear, transform 600ms ease-in-out;
+   }
+
+   &:hover::after,
+   &:focus::after {
+      transform: scale(1.5);
+      opacity: 1;
+   }
+}
+
+.mobile-nav-toggle {
+   display: none;
+
+
+   @include mq (small) {
+      position: absolute;
+      top: 2rem;
+      right: 1.5rem;
+      display: block;
+      width: 1.5rem;
+      height: 1.3125rem;
+      background-image: url(../assets/images/shared/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-color: transparent;
+      z-index: 20;
+   }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+   width: 1.19325rem;
+   height: 1.19325rem;
+   background-image: url("../assets/images/shared/icon-close.svg");
+}
+
+.underline > * {
+   cursor: pointer;
+   border: 0;
+   border-bottom: 3px solid hsl(var(--clr-neutral-2), .0);
+}
+
+.underline > *:hover,
+.underline > *:focus {
+   border-color: hsl(var(--clr-neutral-2), .5);
+}
+
+.underline > .active,
+.underline > [aria-selected="true"] {
+   color: hsl(var(--clr-neutral-2));
+   border-color: hsl(var(--clr-neutral-2));
+ 
+}
+
+.dot > button {
+   cursor: pointer;
+   border-radius: 50%;
+   width: 0.9375rem;
+   height: 0.9375rem;
+   background-color: hsl(var(--clr-neutral-2), .1744);
+   transition: .3s ease;
+}
+
+.dot > *:hover,
+.dot > *:focus {
+   background-color: hsl(var(--clr-neutral-2), .5);
+}
+
+.dot > [aria-selected="true"] {
+   background-color: hsl(var(--clr-neutral-2));
+}
+
+.numbers > button {
+   cursor: pointer;
+   border-radius: 50%;
+   width: 5rem;
+   height: 5rem;
+   background: transparent;
+   border: 1px solid hsl(var(--clr-neutral-2), .25);
+   transition: .3s ease;
+
+   @include mq(medium) {
+      width: 3.75rem;
+      height: 3.75rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.09375rem;
+   }
+
+   @include mq(small) {
+      width: 2.5rem;
+      height: 2.5rem;   
+      font-size: 1rem;
+      letter-spacing: 0.0625rem;;
+   }
+}
+
+.numbers > *:hover,
+.numbers > *:focus {
+   border: 1px solid hsl(var(--clr-neutral-2));
+}
+
+.numbers > [aria-selected="true"] {
+   background-color: hsl(var(--clr-neutral-2));
+   color: hsl(var(--clr-primary-1));
+   border: none;
+}

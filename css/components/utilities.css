@@ -1,0 +1,27 @@
+/*
+0 - 600px: Phone (max-width: 37.5em)
+600 - 900px: Tablet portait (max-width: 56.25em)
+900 - 1200px: Tablet Landscape (max-width: 75em)
+[1200 - 1800px] is where out normal styles apply (min-width: 37.5e)
+1800px +: Big desktop (min-width: 112.5em)
+*/
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/*# sourceMappingURL=utilities.css.map */

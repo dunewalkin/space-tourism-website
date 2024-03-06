@@ -1,23 +1,28 @@
 @font-face {
    font-family: "Barlow";
-   src: url('../assets/fonts/Barlow/Barlow-Medium.ttf');
+   src:   local("Barlow Medium"),
+          url(../assets/fonts/Barlow/Barlow-Medium.woff2) format('woff2'),
+          url(../assets/fonts/Barlow/Barlow-Medium.woff) format('woff');
    font-weight: 400;
-}
-
-@font-face {
+ }
+ @font-face {
    font-family: "Barlow Condensed";
-   src: url('../assets/fonts/Barlow_Condensed/BarlowCondensed-Medium.ttf');
+   src:   local("Barlow Condensed Medium"),
+          url(../assets/fonts/Barlow_Condensed/BarlowCondensed-Medium.woff2) format('woff2'),
+          url(../assets/fonts/Barlow_Condensed/BarlowCondensed-Medium.woff) format('woff');
    font-weight: 400;
-}
-
-@font-face {
+ }
+ @font-face {
    font-family: "Barlow Condensed";
-   src: url('../assets/fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf');
+   src:   local("Barlow Condensed Medium"),
+          url(../assets/fonts/Barlow_Condensed/BarlowCondensed-Bold.woff2) format('woff2'),
+          url(../assets/fonts/Barlow_Condensed/BarlowCondensed-Bold.woff) format('woff');
    font-weight: 700;
-}
-
-@font-face {
+ }
+ @font-face {
    font-family: "Bellefair";
-   src: url('../assets/fonts/Bellefair/Bellefair-Regular.ttf');
+   src:   local("Bellefair Regular"),
+            url(../assets/fonts/Bellefair/Bellefair-Regular.woff2) format('woff2'),
+            url(../assets/fonts/Bellefair/Bellefair-Regular.woff) format('woff');
    font-weight: 400;
-}
+ }
